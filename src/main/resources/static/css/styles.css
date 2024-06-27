@@ -1,0 +1,211 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* White background for the webpage */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the entire application */
+#app-container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    background: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Contact list section */
+#contact-list {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #e0e0e0; /* Slightly darker than white */
+    color: #333; /* Dark text color */
+    overflow-y: auto; /* Add scrollbar for overflow */
+}
+
+#contact-list h2 {
+    text-align: center;
+    color: #333; /* Dark text color for header */
+    margin-bottom: 20px;
+}
+
+#contact-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#contact-list .contact {
+    padding: 10px;
+    border: 1px solid #bbb; /* Light grey border */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #fff; /* White background for contact items */
+    color: #333; /* Dark text color for contact items */
+}
+
+#contact-list .contact:hover {
+    background-color: #c0c0c0; /* Slightly darker grey background on hover */
+}
+
+/* Chat container section */
+#chat-container {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#chat-container h1 {
+    text-align: center;
+    color: #28a745; /* Greenish text color */
+    margin-bottom: 20px;
+}
+
+#messages {
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.message.me {
+    background: #DCF8C6; /* Greenish background for my messages */
+    align-self: flex-end;
+    text-align: right;
+}
+
+.message.other {
+    background: #FFFFFF; /* White background for other messages */
+    align-self: flex-start;
+    text-align: left;
+}
+
+.message .sender {
+    font-weight: bold;
+}
+
+.message .timestamp {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 5px;
+}
+
+#messageInput {
+    width: calc(100% - 80px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9ecef; /* Light grey background for the text box */
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Login styles */
+#login-container {
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#login-container h1 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+#login-container input[type="text"],
+#login-container input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#login-container button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-container button:hover {
+    background: #218838;
+}
+
+#error-message {
+    display: none;
+    color: red;
+}
+
+/* Username input styles for chat.html */
+.username-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.username-input-container input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.username-input-container button {
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.username-input-container button:hover {
+    background: #218838;
+}

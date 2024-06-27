@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login to Meowchat</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="login-container">
+        <h1>Meowchat</h1>
+        <form onsubmit="handleLogin(event)">
+            <input id="usernameInput" type="text" placeholder="Enter your username..." required>
+            <input id="passwordInput" type="password" placeholder="Enter your password..." required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('usernameInput').value.trim();
+            // const password = document.getElementById('passwordInput').value.trim();
+            const password = 'password'; // Dummy password for any username
+
+            if (username) {
+                sessionStorage.setItem('username', username); // Store username in session storage
+                window.location.href = 'chat.html'; // Redirect to chat page
+            } else {
+                alert('Please enter your username.');
+            }
+        }
+    </script>
+</body>
+</html>

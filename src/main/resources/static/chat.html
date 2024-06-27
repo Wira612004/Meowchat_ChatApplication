@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meowchat</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.0/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <div id="app-container">
+        <div id="contact-list">
+            <h2>Contacts</h2>
+            <ul>
+                <li class="contact" onclick="selectContact('Contact 1')">Contact 1</li>
+                <li class="contact" onclick="selectContact('Contact 2')">Contact 2</li>
+                <li class="contact" onclick="selectContact('Contact 3')">Contact 3</li>
+                <li class="contact" onclick="selectContact('Contact 4')">Contact 4</li>
+                <li class="contact" onclick="selectContact('Contact 5')">Contact 5</li>
+                <li class="contact" onclick="selectContact('Contact 6')">Contact 6</li>
+                <li class="contact" onclick="selectContact('Contact 7')">Contact 7</li>
+                <li class="contact" onclick="selectContact('Contact 8')">Contact 8</li>
+                <li class="contact" onclick="selectContact('Contact 9')">Contact 9</li>
+                <li class="contact" onclick="selectContact('Contact 10')">Contact 10</li>
+                <li class="contact" onclick="selectContact('Contact 11')">Contact 11</li>
+                <li class="contact" onclick="selectContact('Contact 12')">Contact 12</li>
+            </ul>
+        </div>
+        <div id="chat-container">
+            <h1 style="color: #28a745;">•MEÖWCHÄT•</h1>
+            <div id="usernameInputContainer" class="username-input-container" style="display: none;">
+                <input id="usernameInput" type="text" placeholder="Enter your name...">
+                <button onclick="setUsername()">Start Chat</button>
+            </div>
+            <ul id="messages" style="display: none;"></ul>
+            <input id="messageInput" type="text" placeholder="Type your message here..." style="display: none;">
+            <button onclick="sendMessage()" style="display: none;">Send</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const storedUsername = sessionStorage.getItem('username');
+            if (storedUsername) {
+                document.getElementById('usernameInput').value = storedUsername;
+                setUsername();
+            } else {
+                document.getElementById('usernameInputContainer').style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+</html>
