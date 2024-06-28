@@ -1,6 +1,6 @@
 var stompClient = null;
 var username = null;
-var selectedContact = "defaultContact"; // Set a default contact for demonstration
+var selectedContact = "defaultContact"; 
 
 function setUsername() {
     username = document.getElementById('usernameInput').value.trim();
@@ -25,7 +25,7 @@ function connect() {
         });
     }, function (error) {
         console.error('STOMP error: ' + error);
-        setTimeout(connect, 10000); // Reconnect after 10 seconds
+        setTimeout(connect, 10000); 
     });
 }
 
